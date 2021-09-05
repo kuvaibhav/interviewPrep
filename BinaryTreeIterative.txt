@@ -1,0 +1,16 @@
+Binary Tree can be traversed iteratively in depth search manner using Stack.
+
+while(true) {
+	Stack<Tree> s = new Stack<Tree>();
+	if(root != null) {
+		s.push(root);
+		root = root.left;	
+	} else {
+		if(s.isEmpty()) {
+			break;
+		}
+		root = s.pop();
+		print(root)
+		root = root.right;
+	}
+ }
